@@ -1,0 +1,10 @@
+<h1>All Lyrics</h1>
+
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article) %>
+    </li>
+  <% end %>
+  <%= link_to "Create a New Piece", new_article_path, class: "new_article" %>
+</ul>
