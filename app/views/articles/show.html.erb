@@ -1,6 +1,7 @@
 <h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
+<p><center><%= @article.body %></center></p>
 <h3>Comments (<%= @article.comments.size %>)</h3>
+<p><%= @article.save %></p>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
 <%= link_to "<< Back to Lyrics List", articles_path %>
