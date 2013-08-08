@@ -3,7 +3,7 @@ Lyrical::Application.routes.draw do
   resources :tags
   resources :authors
   resources :articles do
-  resources :comments
-    
+    resources :comments
   end
+  match '/auth/:provider/callback', to: 'sessions#create', via: :get
 end

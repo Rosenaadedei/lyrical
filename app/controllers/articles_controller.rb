@@ -9,10 +9,10 @@ class ArticlesController < ApplicationController
 	end
 	def new
 		@article =Article.new
-	
+	 @comment =Comment.new
 	end
 	def create
-	  @article = Article.new(@article_params)
+	  @article = Article.new(article_params)
 	  @article.save
 	  flash.notice = "Article '#{@article.title}' updated!"
 	  redirect_to article_path(@article)
